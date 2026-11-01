@@ -1,4 +1,6 @@
-const API_BASE = 'https://hireai-backend-akheftamfthch6d5.uaenorth-01.azurewebsites.net/api';
+const API_BASE = (location.hostname === '127.0.0.1' || location.hostname === 'localhost')
+  ? 'http://127.0.0.1:8000/api'
+  : 'https://ai-recruitment-system-uk29.onrender.com/api';
 let selectedRole = 'candidate';
 let currentUser = null;
 let currentApplicants = [];
